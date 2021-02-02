@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parking System</title>
+</head>
+<body>
+<h1>ALL PARKING SPACES</h1>
+
+<tr th:each="user: ${allUsers}">
+    <td><b>Parking Space Number:</b></td>
+    <td th:text="${user.getParkingSpace().getId()}"/><br>
+    <td><b>Parking Space State:</b></td>
+    <td th:text="${user.getParkingSpace().getState()}"/><br>
+    <td><b>Parking Space Date to When State:</b></td>
+    <td th:text="${user.getParkingSpace().getDateToWhen()}"/><br>
+    <td><b>Owner: </b></td>
+    <td th:text="${user.getFirstName()}"/>
+    <td th:text="${user.getLastName()}"/><br>
+    <td><b>eMail: </b></td>
+    <td th:text="${user.geteMail()}"/><p>
+
+
+</tr>
+
+</body>
+</html>

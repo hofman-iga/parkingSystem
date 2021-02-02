@@ -29,8 +29,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/parking/admin").hasRole("ADMIN")
                 .antMatchers("/parking/user").hasAnyRole("ADMIN", "USER")
-                .antMatchers("/parking/edit").hasAnyRole("ADMIN", "USER")
-                .antMatchers("parking/all").permitAll()
+                .antMatchers("/parking/modify").hasAnyRole("ADMIN", "USER")
+                .antMatchers("/parking/editSpace").hasAnyRole("ADMIN", "USER")
+                .antMatchers("/parking/all").permitAll()
                 .and().formLogin();
     }
 

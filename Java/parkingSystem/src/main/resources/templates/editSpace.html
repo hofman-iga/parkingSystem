@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Space</title>
+</head>
+<body>
+<h1>PARKING SYSTEM</h1>
+
+
+
+<form th:action="@{/parking/modify}">
+    <br><b>Parking space new state:</b>
+    <br><input type="text" th:name="state"/>
+    <p><b>Parking space new due date:</b>
+    <br><input type="text" th:name="dateToWhen"/>
+    <p><input type="submit"/>
+</form>
+
+
+</body>
+</html>
