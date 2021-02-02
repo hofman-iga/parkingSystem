@@ -1,13 +1,10 @@
 package pl.hofman.parkingSystem.service;
-
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import pl.hofman.parkingSystem.model.ParkingSpace;
 import pl.hofman.parkingSystem.model.UserDb;
-
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -32,7 +29,6 @@ public class MyUserDetails implements UserDetails {
         this.firstNameLog = user.getFirstName();
         this.parkingSpaceLog = user.getParkingSpace();
         this.userDbLog = user;
-
     }
 
     public MyUserDetails() {

@@ -1,8 +1,6 @@
 package pl.hofman.parkingSystem.model;
 
-
 import javax.persistence.*;
-
 
 @Entity
 @Table(name = "parking_space")
@@ -25,32 +23,10 @@ public class ParkingSpace {
         this.state = state;
     }
 
-    //public ParkingSpace(User user) {
-     //   this.user = user;
-    //}
-
     public Integer getId() {
         return id;
     }
 
-    //public User getUser() {
-   //     return user;
-   // }
-
-    //public void setUser(User user) {
-   //     this.user = user;
-    //}
-
-
-    @Override
-    public String toString() {
-        return "ParkingSpace{" +
-                "id=" + id +
-                ", state='" + state + '\'' +
-                ", dateToWhen='" + dateToWhen + '\'' +
-                ", userDb=" + userDb +
-                '}';
-    }
 
     public void setId(Integer id) {
         this.id = id;
@@ -70,6 +46,16 @@ public class ParkingSpace {
 
     public void setDateToWhen(String dateToWhen) {
         this.dateToWhen = dateToWhen;
+    }
+
+    @Override
+    public String toString() {
+        return "ParkingSpace{" +
+                "id=" + id +
+                ", state='" + state + '\'' +
+                ", dateToWhen='" + dateToWhen + '\'' +
+                ", userDb=" + userDb +
+                '}';
     }
 
     @OneToOne(mappedBy = "parkingSpace")

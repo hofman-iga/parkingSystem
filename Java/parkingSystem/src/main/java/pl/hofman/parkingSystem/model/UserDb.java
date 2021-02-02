@@ -1,6 +1,5 @@
 package pl.hofman.parkingSystem.model;
 
-
 import javax.persistence.*;
 
 @Entity
@@ -28,19 +27,6 @@ public class UserDb {
         this.firstName = firstName;
     }
 
-//    @Override
-//    public String toString() {
-//        return "User{" +
-//                "id=" + id +
-//                ", firstName='" + firstName + '\'' +
-//                ", lastName='" + lastName + '\'' +
-//                ", eMail='" + eMail + '\'' +
-//                ", userName='" + userNameDb + '\'' +
-//                ", parkingSpaceId=" + parkingSpace.getId() + '\'' +
-//                ", parkingSpace=" + parkingSpace.getState() + '\'' +
-//                ", parkingSpaceDate='" + parkingSpace.getDateToWhen() +
-//                '}';
-//    }
 
     @Override
     public String toString() {
