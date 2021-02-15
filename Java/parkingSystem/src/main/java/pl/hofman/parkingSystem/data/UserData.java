@@ -1,14 +1,16 @@
-/*package pl.hofman.parkingSystem.data;
+package pl.hofman.parkingSystem.data;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import pl.hofman.parkingSystem.model.ParkingSpace;
 import pl.hofman.parkingSystem.model.UserDb;
 import pl.hofman.parkingSystem.repository.UserRepository;
 
 @Component
+@Profile("demo")
 public class UserData implements CommandLineRunner {
 
     @Autowired
@@ -147,4 +149,3 @@ public class UserData implements CommandLineRunner {
         userRepository.save(userDb8);
     }
 }
-*/
