@@ -30,6 +30,10 @@ To run this project, install it locally:
 ```
 $ git clone git@github.com:hofman-iga/parkingSystem.git
 
+Then run the following command in a terminal window (in the complete) directory:
+
+$ mvnw spring-boot:run
+
 ```
 
 ## Usage
