@@ -1,6 +1,7 @@
 package pl.hofman.parkingSystem.controller;
 
 import io.swagger.annotations.ApiOperation;
+import io.swagger.models.Swagger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -38,10 +39,10 @@ public class UserController {
     }
 
     @RequestMapping("/modify")
-    //Swagger:
-    @ApiOperation(value = "Endpoint to which user is after changing parking space details",
-            notes = "Only state and due date of parking space can be changed",
-            response = UserDb.class)
+   // Swagger:
+   @ApiOperation(value = "Endpoint to which user is redirected after changing parking space details",
+           notes = "Only state and due date of parking space can be changed",
+           response = UserDb.class)
     public String updateSpaceStatus(@AuthenticationPrincipal MyUserDetails userDetails, @RequestParam(value = "state", required = false) String state,
                                     @RequestParam(value = "dateToWhen", required = false) String dateToWhen, Model model) {
 
