@@ -35,6 +35,7 @@ Then run the following command in a terminal window (in the complete) directory:
 $ mvnw spring-boot:run
 
 ```
+To test the application it needs to be started in demo profile (otherwise tables in database will not be created).
 
 ## Usage
 
